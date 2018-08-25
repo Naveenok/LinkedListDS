@@ -58,4 +58,20 @@ public class LinkedListDS {
 			node.next = obj;
 		}
 	}
+	
+	public void delete(int loc) {
+		if(loc==0){
+			head=head.next;
+		}
+		else {
+			Node node = head;
+			Node n1=null;
+			for (int i = 0; i < loc-1; i++) {
+				node=node.next;
+			}
+			n1=node.next;
+			node.next=n1.next;
+			n1=null;
+		}
+	}
 }

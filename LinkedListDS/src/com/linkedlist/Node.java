@@ -15,6 +15,7 @@ public static void main(String[] args) {
 	l.insert(10);
 	l.insert(15);	
 	l.insertAtPosition(0, 20);
+	l.delete(1);
 	l.show();
 }
 
