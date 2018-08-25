@@ -31,4 +31,32 @@ public void show(){
 	}
 	System.out.println(node.data);
 }
+public void insertAtStart(int value){
+	Node obj=new Node();
+	obj.data=value;
+	obj.next=null;
+	if(head==null){
+		head=obj;
+	}
+	else {
+		obj.next=head;
+		head=obj;
+	}
 }
+public void insertAtPosition(int loc,int value) {
+	Node obj = new Node();
+	obj.data=value;
+	obj.next=null;
+	Node node=head;
+	if (loc==0) {
+		insertAtStart(value);
+	}
+	for (int i = 0; i < loc-1; i++) {
+		node=node.next;
+	}	
+	obj.next=node.next;
+	node.next=obj;
+	}
+	
+}
+
